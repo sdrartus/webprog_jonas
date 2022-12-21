@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .container {
+        display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  margin-top: 5;
+  padding: 5;
+  border: 1px solid burlywood;
+}
+
+.vertical-center {
+    margin-top: 5;
+  padding: 5;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+    </style>
+    </head>
+<body>
+    
+<br><br><br>
+<div class="container">
+    <div class="vertical-center">
+<h2>Enter Information<h2>
+<br>
+<br>
+<button type="button" class="btn btn-primary" onclick="myFunction()">Generate Prompt Box</button>
+<br>
+<br>
+
+<p id="prompt"></p>
+</div>
+</div>
+</body>
+<br>
+<br><br><br><br>
+<br>
+<br>
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-dark" href="">Jonas Xedrix Bernales</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+<!--FUNCTIONS-->
+<script>
+function myFunction() {
+  let text;
+  let person = prompt("Please enter your name:");
+  let age = prompt("Please enter your age:");
+  let gender = prompt("Please enter your gender: ");
+  let add = prompt("Please enter your Address:");
+  if (person == null || person == "" || age == null || age == ""|| gender == null || gender == "" || add == null || add == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Name: " + person +  "\n         Age: "+ age + "\n         Gender: "+ gender + "\n       Address: "+add;
+  }
+  document.getElementById("prompt").innerHTML = text;
+}
+</script>
+
+</html>
